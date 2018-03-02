@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Users</title>
+  <!-- <link rel="stylesheet" href="static/style.css"> -->
+</head>
+<body>
+  {% with failPass = get_flashed_messages() %}
+    {% if failPass %}
+      {%- for msg in failPass %}
+        <p>{{ msg }}</p>
+      {% endfor -%}
+    {% endif %}
+  {% endwith %}
+  <h1>Register</h1>
+  <form action='/success' method='post'>
+    <label>First Name:<input type="text" name="first_name" id="first_name"></label>
+    <label>Last Name:<input type="text" name="last_name" id="last_name"></label>
+    <label>Email<input type="text" name="email" id="email"></label>
+    <label>Password<input type="text" name="password" id="password"></label>
+    <label>Confirm Password<input type="text" name="cpassword" id="cpassword"></label>
+    <input type="submit" value="Submit">
+  </form>
+  <h1>Login</h1>
+  <form action='/login' method='POST'>
+    <label for="email">Email<input type="text" name="email" id="email"></label>
+    <label for="password">Password<input type="text" name="password" id="password"></label>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>logged in</h1>
+    {% for users in all_users: %}  
+    <ul>
+        <li>{{ users['first_name']}}</li>
+        <li>{{ users['last_name']}}</li>
+    </ul>
+    {% endfor %}
+    <form action='/logout' method='POST'>
+        <input type='submit' value='Logout'>
+    </form>
+</body>
+</html>

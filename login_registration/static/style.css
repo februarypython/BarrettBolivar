@@ -1,0 +1,28 @@
+body {
+    padding-left: 25%;
+}
+.wrapper {
+    border: 1px solid black;
+}
+.box {
+    display: block;
+    background-color: grey;
+    padding-left: 20px;
+}
+h3 {
+    display: inline;
+    margin-right: 50px;
+}
+.underbox {
+    margin-top: 0px;
+    background-color: white;
+}
+ul li{
+    display: inline;
+    list-style: none;
+    margin-right: 50px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
